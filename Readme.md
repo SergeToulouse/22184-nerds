@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Serge T](https://up.htmlacademy.ru/htmlcss/19/user/22184).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Чепулис](https://htmlacademy.ru/profile/id240237).
 
 ---
 
