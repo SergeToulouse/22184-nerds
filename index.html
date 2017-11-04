@@ -5,8 +5,104 @@
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+      <header class="main-header">
+          <nav class="main-navigation">
+              <a class="main-header-logo"><!--для других страницах добавить ссылку на index.html-->
+                  <img src="logo.svg" alt="Логотип Nerds">
+              </a>
+              <ul class="site-navigation">
+                  <li><a href="studio.html">СТУДИЯ</a></li>              
+                  <li><a href="customers.html">КЛИЕНТЫ</a></li>
+                  <li><a href="catalog.html">ММАГАЗИН</a></li>
+                  <li><a href="contacts.html">КОНТАКТЫ</a></li>
+              </ul>
+              <a href="cart.html">КОРЗИНА</a><!--Не забыть про значек карзины-->
+          </nav>      
+      </header>
+      <main>
+          <h1 class="visual-hidden">Дизайн-студия Nerds</h1>
+          <section class="slider">
+              <h2 class="visual-hidden">Слайдер</h2>
+              <b class="slider-slogan">Долго, дорого, скурпулезно.</b>
+              <p class="slider-comment">Математически выверенный дизайн для вашего сайта и мобильного приложения.</p><!-- Возможно стоит вставить <br> после слова "дизайн"-->
+              <a class="slider-button">УЗНАТЬ БОЛЬШЕ</a><!--Сюда нужно добавить ссылку-->
+              <img src="slider-picture.svg" alt="Картинка на слайдере">
+          </section>
+          <section class="services">
+              <h2 class="visual-hidden">Наши услуги</h2>
+              <ul class="services-list">
+                  <li class="services-item services-item-suites">
+                      <h3 class="services-list-title">ВЕБ-САЙТЫ</h3>
+                      <p class="services-list-comment">Мир никогда не будет прежним после того как увидит ваш сайт!</p><!-- Возможно стоит вставить <br> после слова "прежним"-->
+                      <a class="btn btn-red">Заказать</a>
+                      <img src="services-list-suites-picture.svg" alt="Веб-сайты картинка">
+                  </li>
+                  <li class="services-item services-item-applications">
+                      <h3 class="services-list-title">ПРИЛОЖЕНИЯ</h3>
+                      <p class="services-list-comment">Покорите топ-10 приложений в AppStore и Google Play</p><!-- Возможно стоит вставить <br> после предлога "в"-->
+                      <a class="services-list-applications-button">ЗАКАЗАТЬ</a>
+                      <img src="services-list-applications-picture.svg" alt="Приложения картинка">
+                  </li>
+                  <li class="services-item services-item-presentations">
+                      <h3 class="services-list-title">ПРЕЗЕНТАЦИИ</h3>
+                      <p class="services-list-comment">Вы даже не представляете, насколько вы изумительны!</p><!-- Возможно стоит вставить <br> после предлога запятой-->
+                      <a class="services-list-presentations-button">ЗАКАЗАТЬ</a>
+                      <img src="services-list-presentations-picture.svg" alt="Презентации картинка">
+                  </li>
+              </ul>
+          </section>
+          <section class="about-us">
+              <h2 class="visual-hidden">О нас</h2>
+              <b class="about-us-we">Мы - маленькая, но гордая дизайн-студия из Краснодара.</b>
+              <p class="about-us-principles">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы</p>
+              <p class="about-us-services">ВЫПОЛНЯЕМ ЗАКАЗЫ НА РАЗРАБОТКУ:</p>
+              <ul class="about-us-services-list"><!--Над именами классов этого раздела надо ещё подумать-->
+                  <li class="about-us-services-list">Веб-сайтов любой сложности</li>
+                  <li class="about-us-services-list">Мобильных приложений для iOS и Android</li>
+                  <li class="about-us-services-list">Слайдшоу и видео для корпоративных презентаций</li>                  
+              </ul>
+              <img src="nerds-firework.svg" alt="Картине Nerds феерверк">
+              <p class="about-us-table-title">С 2004 ГОДА ЛЮБИМ ТОЧНОСТЬ ВО ВСЕМ:</p>
+              <table class="about-us-table">
+                  <tr>
+                      <td>146<span>%</span></td>
+                      <td class="about-us-table-percent-figure">100<span class="about-us-table-percent-simbol">%</span></td>
+                      <td class="about-us-table-percent-figure">50<span class="about-us-table-percent-simbol">%</span></td>
+                  </tr>
+                  <tr class="about-us-table-text">
+                      <td class="about-us-table-text">Уровень самоотдачи</td>
+                      <td class="about-us-table-text">Соблюдение сроков</td>
+                      <td class="about-us-table-text">Минимальная предоплата</td>
+              </table>
+          </section>
+          <section class="partners">
+              <h2 class="visual-hidden">Наши партнеры</h2><!--Возможно это что то другое-->
+              <ul class="logos-list">
+                  <li class="logos-list">
+                      <img src="html-academy.svg" alt="html-academy-logo">
+                  </li>
+                  <li class="logos-list">
+                      <img src="BORODINSKI.svg" alt="BORODINSKI-logo">
+                  </li>
+                  <li class="logos-list">
+                      <img src="PINK.svg" alt="PINK-logo">
+                  </li>
+                  <li class="logos-list">
+                      <img src="MISHKA.svg" alt="MISHKA-logo">
+                  </li>
+              </ul>
+          </section>
+          <section class="map">
+              <h2 class="visual-hidden">Как нас найти</h2>
+              <!--Сюда надо вставить карту-->
+          </section>
+          <footer class="main-footer">
+              <b class="footer-let's-be-friends">Давайте дружить, это выгодно</b>
+              <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
+              <div class="footer-social">
+                  <a class="social-btn" href="#" target="_blank"><span class="visual-hidden">vk</span></a>
+              </div>
+          </footer>
+      </main>
   </body>
 </html>
