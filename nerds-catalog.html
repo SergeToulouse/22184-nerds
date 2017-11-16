@@ -34,15 +34,15 @@
                       <legend class="selection-parameter-grid">Сетка:</legend>
                       <ul>
                           <li class="filter-option">
-                              <input class="visually-hidden" type="radio" name="adaptive" value="adaptive-grid"  id="parameter-adaptive-grid" checked><!--Ввести дополнительный класс?-->
+                              <input class="visually-hidden" type="radio" name="grid" value="adaptive-grid"  id="parameter-adaptive-grid" checked><!--Ввести дополнительный класс?-->
                               <label for="parameter-adaptive-grid">Адаптивная</label>
                           </li>
                           <li class="filter-option">
-                              <input class="visually-hidden" type="radio" name="fixed" value="fixed-grid" id="parameter-fixed-grid">
+                              <input class="visually-hidden" type="radio" name="grid" value="fixed-grid" id="parameter-fixed-grid">
                               <label for="parameter-fixed-grid">Фиксированная</label>
                           </li>
                           <li class="filter-option">
-                              <input class="visually-hidden" type="radio" name="fluid" value="fluid-grid" id="parameter-fluid-grid" disabled>
+                              <input class="visually-hidden" type="radio" name="grid" value="fluid-grid" id="parameter-fluid-grid" disabled>
                               <label for="parameter-fluid-grid">Резиновая</label>
                           </li>
                       </ul>
@@ -163,7 +163,9 @@
                   <li class="pagination-item"><a href="#">3</a></li>
                   <li class="pagination-item-next"><a href="#">Следующая</a></li>
               </ul>
-          </section>
+          </section> 
+      </main>
+      <footer class="main-footer">
           <section class="map-contacts">
               <h2 class="visual-hidden">Как нас найти</h2>
               <div class="we-in-real">
@@ -174,15 +176,13 @@
                   <img src="img/map-contacts.svg" alt="Карта">
               </div>
           </section>
-          <footer class="main-footer">
-              <div class="footer-social">
-                  <a class="social-btn" href="#" target="_blank"><span class="visual-hidden">vk</span></a>
-                  <a class="social-btn" href="#" target="_blank"><span class="visual-hidden">facebook</span></a>
-                  <a class="social-btn" href="#" target="_blank"><span class="visual-hidden">instagram</span></a>
-              </div>
+          <div class="footer-social">
+              <a class="social-btn" href="#" target="_blank"><span class="visual-hidden">vk</span></a>
+              <a class="social-btn" href="#" target="_blank"><span class="visual-hidden">facebook</span></a>
+              <a class="social-btn" href="#" target="_blank"><span class="visual-hidden">instagram</span></a>
+          </div>
               <b class="footer-let's-be-friends">Давайте дружить, это выгодно</b>
-              <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>              
-          </footer>
-      </main>
+              <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
+      </footer>
   </body>
 </html>
