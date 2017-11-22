@@ -27,8 +27,16 @@
               <h2 class="visual-hidden">Выбор по параметрам</h2>
               <form class="filter" method="post" action="#">
                   <fieldset>
-                      <legend class="selection-parameter-cost">Стоимость:</legend>
+                      <legend class="selection-parameter-price">Стоимость:</legend>
                       <!--Ползунок-->
+                      <p class="price-item">
+                          <label for="price-from">от</label>
+                          <input id="price-from" type="text" name="from" value="" placeholder="0">
+                      </p>
+                      <p class="price-item">
+                          <label for="price-to">до</label>
+                          <input id="price-to" type="text" name="to" value="" placeholder="15 000">
+                      </p>
                   </fieldset>
                   <fieldset>
                       <legend class="selection-parameter-grid">Сетка:</legend>
@@ -157,12 +165,14 @@
                       </div>
                   </li>
               </ul>
-              <ul class="pagination-list">
-                  <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
-                  <li class="pagination-item"><a href="#">2</a></li>
-                  <li class="pagination-item"><a href="#">3</a></li>
-                  <li class="pagination-item-next"><a href="#">Следующая</a></li>
-              </ul>
+              <div class="pagination">
+                  <ul class="pagination-list">
+                      <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+                      <li class="pagination-item"><a href="#">2</a></li>
+                      <li class="pagination-item"><a href="#">3</a></li>
+                  </ul>
+                  <button class="btn btn-gray" type="button">Следующая</button>
+              </div>
           </section> 
       </main>
       <footer class="main-footer">
