@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,9 +18,10 @@
             <ul class="site-navigation">
                 <li><a href="#">Студия</a></li>
                 <li><a href="#">Клиенты</a></li>
-                <li><a href="nerds-catalog.html">Магазин</a></li>
+                <li><a class="active" href="nerds-catalog.html">Магазин</a></li>
                 <li><a href="#">Контакты</a></li>
-            </ul> <a href="#">Корзина</a>
+            </ul>
+            <a class="cart" href="#">Корзина</a>
             <!--Не забыть про значек карзины-->
         </nav>
     </header>
@@ -42,17 +46,17 @@
                 </fieldset>
                 <fieldset>
                     <legend class="form-legend">Сетка:</legend>
-                    <ul>
-                        <li class="filter-option">
+                    <ul class="options">
+                        <li class="filter-option-radio">
                             <input class="visually-hidden" type="radio" name="grid" value="adaptive-grid" id="parameter-adaptive-grid" checked>
                             <!--Ввести дополнительный класс?-->
                             <label for="parameter-adaptive-grid">Адаптивная</label>
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-option-radio">
                             <input class="visually-hidden" type="radio" name="grid" value="fixed-grid" id="parameter-fixed-grid">
                             <label for="parameter-fixed-grid">Фиксированная</label>
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-option-radio">
                             <input class="visually-hidden" type="radio" name="grid" value="fluid-grid" id="parameter-fluid-grid" disabled>
                             <label for="parameter-fluid-grid">Резиновая</label>
                         </li>
@@ -60,24 +64,24 @@
                 </fieldset>
                 <fieldset>
                     <legend class="form-legend">Особенности:</legend>
-                    <ul>
-                        <li class="filter-option">
+                    <ul class="options">
+                        <li class="filter-option-checkbox">
                             <input class="visually-hidden" type="checkbox" name="slider" id="slider-field" checked>
                             <label for="slider-field">Слайдер</label>
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-option-checkbox">
                             <input class="visually-hidden" type="checkbox" name="advantage-unit" id="advantage-unit-field">
                             <label for="advantage-unit-field">Блок преимуществ</label>
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-option-checkbox">
                             <input class="visually-hidden" type="checkbox" name="news" id="news-field" checked>
                             <label for="news-field">Новости</label>
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-option-checkbox">
                             <input class="visually-hidden" type="checkbox" name="gallery" id="gallery-field">
                             <label for="gallery-field">Галерея</label>
                         </li>
-                        <li class="filter-option">
+                        <li class="filter-option-checkbox">
                             <input class="visually-hidden" type="checkbox" name="cart" id="cart-field">
                             <label for="cart-field">Корзина</label>
                         </li>
@@ -102,7 +106,8 @@
                     </li>
                 </ul>
                 <div class="sortiring-arrows">
-                    <a class="sorting-arrow active" href="#"><span class="visually-hidden">По убыванию</span></a> <a class="sorting-arrow" href="#"><span class="visually-hidden">По взрастанию</span></a>
+                    <a class="sorting-arrow active" href="#"><span class="visually-hidden">По убыванию</span></a>
+                    <a class="sorting-arrow" href="#"><span class="visually-hidden">По взрастанию</span></a>
                 </div>
             </div>
             <ul class="catalog-list">

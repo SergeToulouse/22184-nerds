@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #283136;
+    
+    background-color: #ffffff;
+}
+a {
+    text-decoration: none;
+}
+.btn {
+    font: inherit;
+    font-size: 16px;
+    line-height: 30px;
+    
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    vertical-align: middle;
+    text-transform: uppercase;
+    
+    border-radius: 2px;
+    border: none;
+}
+.btn-red {
+    background-color: #fb565a;
+}
+.btn-red:hover {
+    background-color: #e74246;
+}
+.btn-red:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #d7373b;
+}
+.btn-green {
+    background-color: #00ca74;
+}
+.btn-green:hover {
+    background-color: #00bc6c;
+}
+.btn-green:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #00aa62;
+}
+.btn-yellow {
+    background-color: #efc84a;
+}
+.btn-yellow:hover {
+    background-color: #eab534;
+}
+.btn-yellow:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #e5a722;
+}
+.main-navigation {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    
+    background-color: #eeeeee;
+}
+.site-navigation{
+    list-style: none;
+}
+.site-navigation a,
+.cart {
+    color: #000000;
+}
+.site-navigation a:hover,
+.cart:hover,
+.site-navigation a:focus,
+.cart:focus {
+    color: #fb565a;
+}
+.site-navigation a:active,
+.cart:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+.site-navigation .active {
+    border-bottom: 2px solid #fb565a;<!--увеличить отступ-->
+}
+.slider {
+    background-color: #eeeeee;
+}
+/*----------------------------------------Наши услуги----------------------------------------*/
+.services {
+    border-bottom: 2px solid #eeeeee;
+}
+.slider-slogan {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+}
+.services-list {
+    list-style: none;
+}
+.services-item-title {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/*----------------------------------------О нас----------------------------------------*/
+.about-us {
+    border-bottom: 2px solid #eeeeee;
+}
+.about-us-we {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+}
+.about-us-services {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.about-us-table-title {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.about-us-table-percent-figure {
+    font-size: 45px;
+    line-height: 10px;
+    font-weight: 700;
+}
+.about-us-table-percent-simbol {
+    font-size: 25px;
+    line-height: 10px;
+    font-weight: 700;
+    vertical-align: top;
+}
+.about-us-table-text {
+    line-height: 18px;
+}
+/*----------------------------------------партнёры----------------------------------------*/
+.wrap-item a {
+    color: rgba(0, 0, 0, 0.2);
+}
+.wrap-item a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+.wrap-item a:active {
+    color: rgba(0, 0, 0, 0.1);/*ПОЧЕМУ ЭТО НЕ РАБОТАЕТ????*/
+}
+.partners {
+    border-bottom: 2px solid #eeeeee;
+}
+/*----------------------------------------Как нас найти----------------------------------------*/
+.nerds-name {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+}
+.address-telephone {
+    line-height: 18px;
+}
+.footer-lets-be-friends {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+}
+.footer-discount {
+    line-height: 22px;
+}
+/*----------------------------------------Напишите нам----------------------------------------*/
+.write-us-form-title {
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 500;
+}
+.field-title {
+    line-height: 18px;
+    font-weight: 700;
+}
+.field-title input,
+.field-title textarea {
+    font: inherit;
+    line-height: 18px;
+    color: #d7dcde;
+    
+    border: 2px solid #d7dcde;/*этот цвет надо проверить*/
+    border-radius: 3px;/*это значение надо уточнить*/
+}
+.field-title input:hover,
+.field-title textarea:hover {
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.5);
+    
+    border: 2px solid #b4b9bb;
+    border-radius: 3px;/*это значение надо уточнить*/
+}
+.field-title input:focus,
+.field-title textarea:focus {
+    line-height: 18px;
+    color: #b4b9bb;/*этот цвет надо проверить*/
+    
+    border: 2px solid #b4b9bb;
+    border-radius: 3px;
+}
+.field-title input:invalid,
+.field-title textarea:invalid {
+    line-height: 18px;
+    color: #e74246;
+    
+    border: 2px solid #e74246;
+    border-radius: 3px;
+}
+/*----------------------------------------nerds-catalog.html----------------------------------------*/
+.page-title-text {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+}
+/*----------------------------------------Выбор по параметрам----------------------------------------*/
+.filters fieldset {
+    border: none;
+}
+.filters legend {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+}
+.price-item {
+    line-height: 22px;
+    text-transform: uppercase;/*Нужно ли стилизовать эти окошки как поля ввода?*/
+}
+.price-item input {
+    font: inherit;
+    
+    background-color: #eeeeee;
+}
+.filter-option-radio {
+    list-style: none;    
+    line-height: 20px;
+}
+.filter-option-radio label {
+    color: #283136;
+}
+.filter-option-radio label:hover {
+    color: rgba(0, 0, 0, 1);
+}
+.filter-option-radio label:disabled {
+    color: rgba(0, 0, 0, 0.3);
+}
+.filter-option-checkbox {
+    list-style: none;    
+    line-height: 20px;
+}
+.filter-option-checkbox label {
+    color: #283136;
+}
+.filter-option-checkbox label:hover {
+    color: #283136;/*Возможно это правило лишнее*/
+}
+.filter-option-checkbox label:disabled {
+    color: rgba(0, 0, 0, 0.3);
+}
+.btn-gray {
+    color: rgba(0, 0, 0, 1);
+    font-weight: 500;
+    
+    background-color: #eeeeee;
+}
+.btn-gray:hover {
+    background-color: #dfdfdf;
+}
+.btn-gray:active {
+    color: rgba(0, 0, 0, 0.3);
+    
+    background-color: #d5d5d5;
+    border-top: 3px solid #bfbfbf;
+}
+/*----------------------------------------Каталог----------------------------------------*/
+.sorting-list a {
+    list-style: none;
+    color: rgba(0, 0, 0, 0.3);
+}
+.sorting-list a:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+.sorting-list a:focus {
+    color: rgba(0, 0, 0, 1);
+}
+.sortiring-arrows a {
+    color: rgba(0, 0, 0, 0.2);
+}
+.sorting-arrows a:hover {
+    color: rgba(0, 0, 0, 0.6);/*Непонятный цвет в стайлгайде*/
+}
+.sorting-arrows a:focus {
+    color: rgba(0, 0, 0, 1);
+}
+.catalog-list {
+    list-style: none;
+}
+.catalog-item-title h3 {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000000;
+}
+.catalog-item-comment {
+    line-height: 18px;
+    color: #666666;
+}
+.catalog-item .btn-red:focus {
+    color: #ffffff;
+}
+.pagination-list {
+    list-style: none;
+}
+.pagination-list a {
+    color: #000000;
+    font-weight: 500;
+    background-color: #eeeeee;
+}
+.pagination-list a:hover {
+    background-color: #dfdfdf;
+}
+.pagination-list a:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #d5d5d5;
+    border-top: 3px solid #bfbfbf;
+}
+/*сюда надо прописать активное состояние*/
