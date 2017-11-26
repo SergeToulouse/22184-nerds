@@ -33,16 +33,20 @@
             <h2 class="visual-hidden">Выбор по параметрам</h2>
             <form class="filter" method="get" action="#">
                 <fieldset>
-                    <legend class="form-legend">Стоимость:</legend>
-                    <!--Ползунок-->
-                    <p class="price-item">
-                        <label for="price-from">от</label>
-                        <input id="price-from" type="text" name="from" value="" placeholder="0">
-                    </p>
-                    <p class="price-item">
-                        <label for="price-to">до</label>
-                        <input id="price-to" type="text" name="to" value="" placeholder="15 000">
-                    </p>
+                    <legend>Стоимость:</legend>
+                    <div class="range-filter">
+                        <div class="range-controls">
+                            <div class="scale">
+                                <div class="bar"></div>
+                            </div>
+                            <div class="toggle toggle-min"></div>
+                            <div class="toggle toggle-max"></div>
+                        </div>
+                        <div class="price-controls">
+                            <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                            <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+                        </div>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend class="form-legend">Сетка:</legend>
@@ -82,7 +86,7 @@
                             <label for="gallery-field">Галерея</label>
                         </li>
                         <li class="filter-option-checkbox">
-                            <input class="visually-hidden" type="checkbox" name="cart" id="cart-field">
+                            <input class="visually-hidden" type="checkbox" name="cart" id="cart-field" disabled>
                             <label for="cart-field">Корзина</label>
                         </li>
                     </ul>

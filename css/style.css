@@ -139,14 +139,14 @@ a {
     line-height: 18px;
 }
 /*----------------------------------------партнёры----------------------------------------*/
-.wrap-item a {
-    color: rgba(0, 0, 0, 0.2);
+.wrap-item {
+    opacity: 0.2;
 }
-.wrap-item a:hover {
-    color: rgba(0, 0, 0, 1);
+.wrap-item:hover {
+    opacity: 1;
 }
-.wrap-item a:active {
-    color: rgba(0, 0, 0, 0.1);/*ПОЧЕМУ ЭТО НЕ РАБОТАЕТ????*/
+.wrap-item:active {
+    opacity: 0.1;
 }
 .partners {
     border-bottom: 2px solid #eeeeee;
@@ -184,8 +184,8 @@ a {
     line-height: 18px;
     color: #d7dcde;
     
-    border: 2px solid #d7dcde;/*этот цвет надо проверить*/
-    border-radius: 3px;/*это значение надо уточнить*/
+    border: 2px solid #d7dcde;
+    border-radius: 3px;
 }
 .field-title input:hover,
 .field-title textarea:hover {
@@ -193,24 +193,24 @@ a {
     color: rgba(0, 0, 0, 0.5);
     
     border: 2px solid #b4b9bb;
-    border-radius: 3px;/*это значение надо уточнить*/
+    border-radius: 3px;
 }
 .field-title input:focus,
 .field-title textarea:focus {
     line-height: 18px;
-    color: #b4b9bb;/*этот цвет надо проверить*/
+    color: #b4b9bb;
     
     border: 2px solid #b4b9bb;
     border-radius: 3px;
 }
-.field-title input:invalid,
+/*.field-title input:invalid,
 .field-title textarea:invalid {
     line-height: 18px;
     color: #e74246;
     
     border: 2px solid #e74246;
     border-radius: 3px;
-}
+}*/
 /*----------------------------------------nerds-catalog.html----------------------------------------*/
 .page-title-text {
     font-size: 55px;
@@ -226,15 +226,112 @@ a {
     line-height: 30px;
     font-weight: 700;
 }
-.price-item {
-    line-height: 22px;
-    text-transform: uppercase;/*Нужно ли стилизовать эти окошки как поля ввода?*/
+/*start*/
+.filter-item {
+  margin: 0;
+  padding: 0;
+  
+  border: none;
+  
+  /* Для демонстрации */
+  width: 260px;
+  margin: 50px auto; 
 }
-.price-item input {
-    font: inherit;
-    
-    background-color: #eeeeee;
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
 }
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  
+  background-color: #f1f1f1;
+  
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+  
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+/*end*/
 .filter-option-radio {
     list-style: none;    
     line-height: 20px;
@@ -255,11 +352,8 @@ a {
 .filter-option-checkbox label {
     color: #283136;
 }
-.filter-option-checkbox label:hover {
-    color: #283136;/*Возможно это правило лишнее*/
-}
-.filter-option-checkbox label:disabled {
-    color: rgba(0, 0, 0, 0.3);
+.filter-option-checkbox input:disabled + label {
+    opacity: 0.3;
 }
 .btn-gray {
     color: rgba(0, 0, 0, 1);
@@ -281,20 +375,9 @@ a {
     list-style: none;
     color: rgba(0, 0, 0, 0.3);
 }
-.sorting-list a:hover {
-    color: rgba(0, 0, 0, 0.6);
-}
+.sorting-list a:hover,
 .sorting-list a:focus {
-    color: rgba(0, 0, 0, 1);
-}
-.sortiring-arrows a {
-    color: rgba(0, 0, 0, 0.2);
-}
-.sorting-arrows a:hover {
-    color: rgba(0, 0, 0, 0.6);/*Непонятный цвет в стайлгайде*/
-}
-.sorting-arrows a:focus {
-    color: rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 0.6);
 }
 .catalog-list {
     list-style: none;
