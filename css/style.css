@@ -1,208 +1,530 @@
 body {
     margin: 0;
     padding: 0;
-    
+
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     color: #283136;
-    
+
     background-color: #ffffff;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
 }
+
 .btn {
-    font: inherit;
+    display: block;
+    padding: 13px 0;
+
     font-size: 16px;
-    line-height: 30px;
-    
-    text-align: center;
+    line-height: 18px;
     color: rgba(255, 255, 255, 1);
-    vertical-align: middle;
     text-transform: uppercase;
-    
-    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+
+    background-color: #fb565a;
+    border-radius: 3px;
     border: none;
 }
+
 .btn-red {
     background-color: #fb565a;
 }
+
 .btn-red:hover {
     background-color: #e74246;
 }
+
 .btn-red:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #d7373b;
 }
+
 .btn-green {
     background-color: #00ca74;
 }
+
 .btn-green:hover {
     background-color: #00bc6c;
 }
+
 .btn-green:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #00aa62;
 }
+
 .btn-yellow {
     background-color: #efc84a;
 }
+
 .btn-yellow:hover {
     background-color: #eab534;
 }
+
 .btn-yellow:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #e5a722;
 }
+
+.container {
+    width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.main-header {
+    background-color: #eeeeee;
+}
+
 .main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     font-size: 16px;
     line-height: 30px;
     font-weight: 500;
     text-transform: uppercase;
-    
-    background-color: #eeeeee;
+
+/*    outline: 1px solid;*/
 }
-.site-navigation{
+
+.main-header-logo {
+    margin: 0;
+    padding: 0;
+    margin-top: 49px;
+    margin-bottom: 0;
+}
+
+.site-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 440px;
+    margin-top: 72px;
+    margin-bottom: 2;
+    padding: 0;
+
     list-style: none;
 }
+
+.cart {
+    margin-top: 56px;
+    margin-bottom: 0;
+}
+
 .site-navigation a,
 .cart {
     color: #000000;
 }
+
 .site-navigation a:hover,
 .cart:hover,
 .site-navigation a:focus,
 .cart:focus {
     color: #fb565a;
 }
+
 .site-navigation a:active,
 .cart:active {
     color: rgba(0, 0, 0, 0.3);
 }
+
 .site-navigation .active {
-    border-bottom: 2px solid #fb565a;<!--увеличить отступ-->
+    border-bottom: 2px solid #fb565a;
+    <!--увеличить отступ-- >
 }
+
+/*----------------------------------------Слайдер----------------------------------------*/
+
+/*new*/
+
 .slider {
+    position: relative;
+
     background-color: #eeeeee;
 }
-/*----------------------------------------Наши услуги----------------------------------------*/
-.services {
-    border-bottom: 2px solid #eeeeee;
+
+.slider-controls {
+    position: absolute;
+    left: 50%;
+    bottom: 104px;
+    z-index: 100;
+
+    width: 160px;
+    height: 18px;
+
+    text-align: center;
+    font-size: 0;
+    transform: translateX(-50%);
 }
-.slider-slogan {
+
+.slider-controls label {
+    position: relative;
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 8px;
+
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-controls label::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+
+    width: 18px;
+    height: 18px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+}
+
+.slider-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.slider-item {
+    display: none;
+    padding: 78px 0 80px 0;
+}
+
+.slider-item:nth-child(1) {
+    background-image: url("../img/slider-picture-1.png");
+    background-repeat: no-repeat;
+    background-position: 93% 18px;
+}
+
+.slider-item:nth-child(2) {
+    background-image: url("../img/slider-picture-2.png");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+}
+
+.slider-item:nth-child(3) {
+    background-image: url("../img/slider-picture-3.png");
+    background-repeat: no-repeat;
+    background-position: 100% 20px;
+}
+
+#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+    display: block;
+}
+
+#product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+    display: block;
+}
+
+#product-3:checked ~ .slider-list .slider-item:nth-child(3) {
+    display: block;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
+#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 4px;
+    height: 4px;
+    margin: -4px;
+    background-color: inherit;
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
+}
+
+.slider-item h3 {
+    max-width: 600px;
+    margin: 0;
+    margin-bottom: 27px;
+
     font-size: 55px;
     line-height: 55px;
     font-weight: 500;
 }
-.services-list {
-    list-style: none;
+
+.slider-item p {
+    max-width: 430px;
+    margin: 0;
+    margin-bottom: 38px;
 }
+
+.slider .btn {
+    width: 240px;
+}
+
+/*----------------------------------------Наши услуги----------------------------------------*/
+
+.services {
+/*    outline: 1px solid;*/
+
+    margin: 0;
+    padding: 0;
+}
+
+.services-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    list-style: none;
+
+    width: 1200px;
+    height: 509px;
+    padding: 0 20px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+.services-item {
+    width: 300px;
+    margin: 0;
+    margin-right: 100px;
+    margin-top: 80px;
+    padding: 0;
+}
+
 .services-item-title {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
+    margin-top: 28px;
 }
+
+.services .btn {
+    width: 160px;
+}
+
 /*----------------------------------------О нас----------------------------------------*/
+
 .about-us {
-    border-bottom: 2px solid #eeeeee;
+    display: flex;
+
+    width: 1200px;
+    height: 529px;
+    padding: 0 20px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+/*    outline: 1px solid;*/
+
+    justify-content: space-between;
+    align-content: center;
 }
+
+.about-us-left-column {
+    width: 660px;
+    height: 100%
+}
+
+.about-us-right-column {
+    width: 360px;
+    height: 100%
+}
+
 .about-us-we {
     font-size: 45px;
     line-height: 45px;
     font-weight: 500;
 }
+
 .about-us-services {
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
     text-transform: uppercase;
 }
+
 .about-us-table-title {
     text-transform: uppercase;
     font-weight: 700;
 }
+
 .about-us-table-percent-figure {
     font-size: 45px;
     line-height: 10px;
     font-weight: 700;
 }
+
 .about-us-table-percent-simbol {
     font-size: 25px;
     line-height: 10px;
     font-weight: 700;
     vertical-align: top;
 }
+
 .about-us-table-text {
     line-height: 18px;
 }
+
 /*----------------------------------------партнёры----------------------------------------*/
+
+.wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 81px;
+}
+
 .wrap-item {
     opacity: 0.2;
+    margin-top: 46px;
+    margin-bottom: 47px;
 }
+
 .wrap-item:hover {
     opacity: 1;
 }
+
 .wrap-item:active {
     opacity: 0.1;
 }
-.partners {
-    border-bottom: 2px solid #eeeeee;
-}
+
 /*----------------------------------------Как нас найти----------------------------------------*/
+
+.map-contacts {
+    min-height: 416px;
+    position: relative;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-image: url(../img/map-contacts.png);
+}
+
+.map-contacts .container {
+    padding-top: 55px;
+}
+
+.we-in-real {
+    width: 220px;
+    padding: 50px;
+    background-color: #fff;
+}
+
 .nerds-name {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
 }
+
 .address-telephone {
     line-height: 18px;
 }
+
+.we-in-real .btn {
+    width: 219px;
+}
+
+.bottom-container {
+    display: flex;
+
+    width: 1200px;
+    height: 217px;
+    padding: 0 20px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    justify-content: space-around;
+    align-items: center;
+
+/*    outline: 1px solid;*/
+}
+
 .footer-lets-be-friends {
     font-size: 36px;
     line-height: 36px;
     font-weight: 700;
 }
+
 .footer-discount {
     line-height: 22px;
 }
+
 /*----------------------------------------Напишите нам----------------------------------------*/
+
+.write-us {
+    display: none;
+}
+
 .write-us-form-title {
     font-size: 45px;
     line-height: 45px;
     font-weight: 500;
 }
+
 .field-title {
     line-height: 18px;
     font-weight: 700;
 }
+
 .field-title input,
 .field-title textarea {
     font: inherit;
     line-height: 18px;
     color: #d7dcde;
-    
+
     border: 2px solid #d7dcde;
     border-radius: 3px;
 }
+
 .field-title input:hover,
 .field-title textarea:hover {
     line-height: 18px;
     color: rgba(0, 0, 0, 0.5);
-    
+
     border: 2px solid #b4b9bb;
     border-radius: 3px;
 }
+
 .field-title input:focus,
 .field-title textarea:focus {
     line-height: 18px;
     color: #b4b9bb;
-    
+
     border: 2px solid #b4b9bb;
     border-radius: 3px;
 }
+
+.write-us .btn {
+    width: 260px;
+}
+
 /*.field-title input:invalid,
 .field-title textarea:invalid {
     line-height: 18px;
@@ -211,204 +533,315 @@ a {
     border: 2px solid #e74246;
     border-radius: 3px;
 }*/
+
 /*----------------------------------------nerds-catalog.html----------------------------------------*/
+
+.page-title {
+    background-color: #eeeeee;
+}
+
 .page-title-text {
+    padding-top: 65px;
+    padding-bottom: 110px;
+
     font-size: 55px;
     line-height: 55px;
     font-weight: 500;
 }
+
+.catalog-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
 /*----------------------------------------Выбор по параметрам----------------------------------------*/
+
+.filters {
+    width: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
 .filters fieldset {
     border: none;
 }
+
 .filters legend {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
 }
+
 /*start*/
+
 .filter-item {
-  margin: 0;
-  padding: 0;
-  
-  border: none;
-  
-  /* Для демонстрации */
-  width: 260px;
-  margin: 50px auto; 
+    margin: 0;
+    padding: 0;
+
+    border: none;
+
+    /* Для демонстрации */
+    width: 260px;
+    margin: 50px auto;
 }
 
 .range-filter {
-  width: 260px;
-  margin-top: 49px;
+    width: 260px;
+    margin-top: 49px;
 }
 
 .filter-item legend {
-  font-size: 18px;
-  line-height: 24px;
-  text-transform: uppercase;
-  font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .range-controls {
-  position: relative;
-  
-  height: 41px;
-  margin-bottom: 15px;
-  padding-top: 39px;
-  padding-right: 20px;
-  padding-left: 20px;
-  
-  background-color: #f1f1f1;
-  
-  border-radius: 5px;
+    position: relative;
+
+    height: 41px;
+    margin-bottom: 15px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    background-color: #f1f1f1;
+
+    border-radius: 5px;
 }
 
 .range-controls .scale {
-  height: 2px;
+    height: 2px;
 
-  background: #d7dcde;
+    background: #d7dcde;
 }
 
 .range-controls .bar {
-  width: 70%;
-  height: 2px;
+    width: 70%;
+    height: 2px;
 
-  background: #00ca74;
+    background: #00ca74;
 }
 
 .range-controls .toggle {
-  position: absolute;
-  top: 31px;
-  left: 0;
-  
-  width: 4px;
-  height: 4px;
-  padding: 0;
+    position: absolute;
+    top: 31px;
+    left: 0;
 
-  border: 8px solid #ffffff;
-  background-color: #ababab;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
-  border-radius: 50%;
-  cursor: pointer;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .range-controls .toggle-min {
-  left: 50px;
+    left: 50px;
 }
 
 .range-controls .toggle-max {
-  left: 110px;
+    left: 110px;
 }
 
 .price-controls {
-  font-size: 0;
+    font-size: 0;
 }
 
 .price-controls label {
-  display: inline-block;
-  width: 50%;
-  
-  font-size: 16px;
-  text-transform: uppercase;
+    display: inline-block;
+    width: 50%;
+
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 .price-controls input {
-  width: 60px;
-  padding: 8px 10px;
-  margin-left: 10px;
-  
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 16px;
-  text-align: center;
-  color: #283136;
-  
-  border: none;
-  border-radius: 5px;
-  background: #f1f1f1;
+    width: 60px;
+    padding: 8px 10px;
+    margin-left: 10px;
+
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #283136;
+
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
 }
 
 .max-price {
-  text-align: right;
+    text-align: right;
 }
+
 /*end*/
+
 .filter-option-radio {
-    list-style: none;    
+    list-style: none;
     line-height: 20px;
 }
+
 .filter-option-radio label {
     color: #283136;
 }
+
 .filter-option-radio label:hover {
     color: rgba(0, 0, 0, 1);
 }
+
 .filter-option-radio label:disabled {
     color: rgba(0, 0, 0, 0.3);
 }
+
 .filter-option-checkbox {
-    list-style: none;    
+    list-style: none;
     line-height: 20px;
 }
+
 .filter-option-checkbox label {
     color: #283136;
 }
+
 .filter-option-checkbox input:disabled + label {
     opacity: 0.3;
 }
+
 .btn-gray {
     color: rgba(0, 0, 0, 1);
     font-weight: 500;
-    
+
     background-color: #eeeeee;
 }
+
 .btn-gray:hover {
     background-color: #dfdfdf;
 }
+
 .btn-gray:active {
     color: rgba(0, 0, 0, 0.3);
-    
+
     background-color: #d5d5d5;
     border-top: 3px solid #bfbfbf;
 }
+
+.filters .btn {
+    width: 260px;
+}
+
 /*----------------------------------------Каталог----------------------------------------*/
+
+.sorting {
+    display: flex;
+    justify-content: space-between;
+
+    width: 760px;
+    margin: 0;
+    padding: 0;
+    min-height: 133px;
+}
+
+.sorting-container {
+    width: 360px;
+}
+
+.sorting-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .sorting-list a {
     list-style: none;
     color: rgba(0, 0, 0, 0.3);
 }
+
 .sorting-list a:hover,
 .sorting-list a:focus {
     color: rgba(0, 0, 0, 0.6);
 }
+
 .catalog-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    width: 760px;
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 }
+
+.catalog-item {
+    width: 360px;
+    margin-bottom: 33px;
+}
+
 .catalog-item-title h3 {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
     color: #000000;
 }
+
 .catalog-item-comment {
     line-height: 18px;
     color: #666666;
 }
+
 .catalog-item .btn-red:focus {
     color: #ffffff;
 }
+
+.pagination {
+    width: 443px;
+}
+
 .pagination-list {
     list-style: none;
+
+    display: flex;
+    justify-content: space-between;
 }
+
+.pagination-item {
+    width: 50px;
+}
+
+.pagination-item-next {
+    width: 260px
+}
+
 .pagination-list a {
     color: #000000;
     font-weight: 500;
     background-color: #eeeeee;
 }
+
 .pagination-list a:hover {
     background-color: #dfdfdf;
 }
+
 .pagination-list a:active {
     color: rgba(0, 0, 0, 0.3);
     background-color: #d5d5d5;
     border-top: 3px solid #bfbfbf;
 }
+
+.catalog .btn {
+    width: 200px;
+}
+
 /*сюда надо прописать активное состояние*/
