@@ -560,6 +560,7 @@ a {
     width: 400px;
     margin: 0;
     padding: 0;
+    padding-top: 60px;
 }
 
 .filter {
@@ -571,12 +572,24 @@ a {
 
 .filters fieldset {
     border: none;
+    
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
-
+.form-legend {
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+}
 .filters legend {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
+    text-transform: uppercase;
+    
+    margin: 0;
+    padding: 0;
 }
 
 /*start*/
@@ -595,6 +608,7 @@ a {
 .range-filter {
     width: 260px;
     margin-top: 49px;
+    padding-bottom: 60px;
 }
 
 .filter-item legend {
@@ -687,6 +701,12 @@ a {
 }
 
 /*end*/
+.grid-options {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
 
 .filter-option-radio {
     list-style: none;
@@ -749,9 +769,21 @@ a {
     width: 760px;
     margin: 0;
     padding: 0;
-    min-height: 133px;
+    padding-top: 60px;
+    min-height: 133px;/*-----------------?????*/
 }
-
+.sorting-title {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.sorting-item {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
 .sorting-container {
     width: 360px;
 }
@@ -785,17 +817,30 @@ a {
 }
 
 .catalog-item {
+    position: relative;
     width: 360px;
     margin-bottom: 33px;
 }
-
+.catalog-item-hover {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #eeeeee;
+    display: none;
+}
+.catalog-item:hover .catalog-item-hover {
+    display: block;
+}
 .catalog-item-title h3 {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
     color: #000000;
 }
-
+.catalog-item-picture img {
+    display: block;
+}
 .catalog-item-comment {
     line-height: 18px;
     color: #666666;
