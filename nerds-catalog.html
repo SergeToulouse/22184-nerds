@@ -21,8 +21,9 @@
                 <li><a href="nerds-catalog.html">Магазин</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
-            <a class="cart" href="#">Корзина</a>
-            <!--Не забыть про значек корзины-->
+            <ul class="cart">
+                <li><a class="cart-link" href="#">Корзина</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -53,41 +54,41 @@
                         <legend class="form-legend">Сетка:</legend>
                         <ul class="grid-options">
                             <li class="filter-option-radio">
-                                <input class="visually-hidden" type="radio" name="grid" value="adaptive-grid" id="parameter-adaptive-grid" checked>
+                                <input class="visually-hidden filter-input-radio" type="radio" name="grid" value="adaptive-grid" id="parameter-adaptive-grid" checked>
                                 <!--Ввести дополнительный класс?-->
                                 <label for="parameter-adaptive-grid">Адаптивная</label>
                             </li>
                             <li class="filter-option-radio">
-                                <input class="visually-hidden" type="radio" name="grid" value="fixed-grid" id="parameter-fixed-grid">
+                                <input class="visually-hidden filter-input-radio" type="radio" name="grid" value="fixed-grid" id="parameter-fixed-grid">
                                 <label for="parameter-fixed-grid">Фиксированная</label>
                             </li>
                             <li class="filter-option-radio">
-                                <input class="visually-hidden" type="radio" name="grid" value="fluid-grid" id="parameter-fluid-grid" disabled>
+                                <input class="visually-hidden filter-input-radio" type="radio" name="grid" value="fluid-grid" id="parameter-fluid-grid" disabled>
                                 <label for="parameter-fluid-grid">Резиновая</label>
                             </li>
                         </ul>
                     </fieldset>
                     <fieldset>
                         <legend class="form-legend">Особенности:</legend>
-                        <ul class="options">
+                        <ul class="features-options">
                             <li class="filter-option-checkbox">
-                                <input class="visually-hidden" type="checkbox" name="slider" id="slider-field" checked>
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="slider" id="slider-field" checked>
                                 <label for="slider-field">Слайдер</label>
                             </li>
                             <li class="filter-option-checkbox">
-                                <input class="visually-hidden" type="checkbox" name="advantage-unit" id="advantage-unit-field">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="advantage-unit" id="advantage-unit-field">
                                 <label for="advantage-unit-field">Блок преимуществ</label>
                             </li>
                             <li class="filter-option-checkbox">
-                                <input class="visually-hidden" type="checkbox" name="news" id="news-field" checked>
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="news" id="news-field" checked>
                                 <label for="news-field">Новости</label>
                             </li>
                             <li class="filter-option-checkbox">
-                                <input class="visually-hidden" type="checkbox" name="gallery" id="gallery-field">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="gallery" id="gallery-field">
                                 <label for="gallery-field">Галерея</label>
                             </li>
                             <li class="filter-option-checkbox">
-                                <input class="visually-hidden" type="checkbox" name="cart" id="cart-field" disabled>
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="cart" id="cart-field" disabled>
                                 <label for="cart-field">Корзина</label>
                             </li>
                         </ul>
@@ -110,9 +111,15 @@
                             <a href="#">По названию</a>
                         </li>
                     </ul>
-                    <div class="sortiring-arrows">
-                        <a class="sorting-arrow active" href="#"><span class="visually-hidden">По убыванию</span></a>
-                        <a class="sorting-arrow" href="#"><span class="visually-hidden">По взрастанию</span></a>
+                    <div class="sorting-arrows">
+                        <a class="sorting-arrow active" href="#">
+                        <span class="visually-hidden">По убыванию</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 10L0 0h11"/></svg>
+                        </a>
+                        <a class="sorting-arrow" href="#">
+                        <span class="visually-hidden">По взрастанию</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"/></svg>
+                        </a>
                     </div>
                 </div>
                 <ul class="catalog-list">
@@ -121,7 +128,7 @@
                             <a class="catalog-item-title" href="#">
                                 <h3>Sedona</h3>
                             </a>
-                            <p class="catalog-item-comment">Информационный сайт для туристов</p>
+                            <p class="catalog-item-comment">Информационный сайт для&nbsp;туристов</p>
                             <a class="btn btn-red" href="#">9900 руб.</a>
                         </div>
                         <div class="catalog-item-picture">
@@ -145,7 +152,7 @@
                             <a class="catalog-item-title" href="#">
                                 <h3>Barbershop</h3>
                             </a>
-                            <p class="catalog-item-comment">Сайт салоны красоты. Для мужчин, да.</p>
+                            <p class="catalog-item-comment">Сайт салоны красоты. Для&nbsp;мужчин, да.</p>
                             <a class="btn btn-red" href="#">9900 руб.</a>
                         </div>
                         <div class="catalog-item-picture">
@@ -157,7 +164,7 @@
                             <a class="catalog-item-title" href="#">
                                 <h3>Mishka</h3>
                             </a>
-                            <p class="catalog-item-comment">Интернет-магазин вязаных игрушек</p>
+                            <p class="catalog-item-comment">Интернет-магазин вязаных&nbsp;игрушек</p>
                             <a class="btn btn-red" href="#">9900 руб.</a>
                         </div>
                         <div class="catalog-item-picture">
