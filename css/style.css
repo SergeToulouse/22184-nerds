@@ -334,11 +334,6 @@ a {
     margin-right: 100px;
     margin-top: 80px;
     padding: 0;
-
-
-/*    background: rgba(234, 255, 45, 0.2);*/
-    /*---------------------------------------------------------------ПОДСВЕТКА*/
-    box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
 }
 .services-item::before {
     content: "";
@@ -370,12 +365,12 @@ a {
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-top: 24px;
-    margin-bottom: 18px
+    margin-top: 25px;
+    margin-bottom: 16px
 }
 .services-item-comment {
     margin: 0;
-    margin-bottom: 31px;
+    margin-bottom: 32px;
     padding: 0;
 }
 
@@ -387,37 +382,38 @@ a {
 
 .about-us {
     display: flex;
-
-    width: 1200px;
-    height: 529px;
-    padding: 0 20px;
-    margin: 0 auto;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
-    /*    outline: 1px solid;*/
     justify-content: space-between;
     align-content: center;
 }
 
 .about-us-left-column {
+    padding-top: 74px;
     width: 660px;
     height: 100%
 }
 
 .about-us-right-column {
+    padding-top: 40px;
     width: 360px;
     height: 100%
 }
 
 .about-us-we {
+    margin: 0;
+    padding: 0;
     font-size: 45px;
     line-height: 45px;
     font-weight: 500;
 }
-
+.about-us-principles {
+    margin: 0;
+    margin-top: 33px;
+    padding: 0;
+}
 .about-us-services {
+    margin: 0;
+    margin-top: 39px;
+    padding: 0;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
@@ -425,8 +421,13 @@ a {
 }
 
 .about-us-table-title {
+    margin: 0;
+    margin-top: 29px;
+    margin-bottom: 56px;
+    padding: 0;
     text-transform: uppercase;
     font-weight: 700;
+    text-align: center
 }
 
 .about-us-table-percent-figure {
@@ -974,6 +975,7 @@ a {
     justify-content: space-between;
     
     margin: 0;
+    margin-top: -5px;
     padding: 0;
 }
 .sorting-arrows a {
@@ -1114,7 +1116,6 @@ a {
 }
 
 .pagination-item {
-    width: 50px;
     margin: 0;
     margin-right: 11px;
 }
@@ -1122,7 +1123,7 @@ a {
     margin-right: 0;
 }
 .pagination-item-next {
-    width: 260px;
+    min-width: 260px;
     text-transform: uppercase;
     text-align: center;
 }
@@ -1132,23 +1133,23 @@ a {
     font-weight: 500;
     background-color: #eeeeee;
     display: block;
-    padding: 10px 19px;
+    padding: 10px 18px;
 }
-/*
-.pagination-list a:first-child {
+.pagination-item-current a {
+    box-sizing: border-box;
     background-color: #ffffff;
 
     border: 3px solid #dbdbdb;
-    border-radius: 3px;
-}*/
+}
 .pagination-list a:hover {
     background-color: #dfdfdf;
+    border-color: #dfdfdf;
 }
 
 .pagination-list a:active {
     color: rgba(0, 0, 0, 0.3);
     background-color: #d5d5d5;
-    border-top: 3px solid #bfbfbf;
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 }
 
 .catalog .btn {
