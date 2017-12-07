@@ -171,11 +171,21 @@ a {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation .active {
-    border-bottom: 2px solid #fb565a;
-    <!--увеличить отступ-- >
+.site-navigation .current-page {
+    position: relative;
 }
-
+.site-navigation .current-page::after {
+    position: absolute;
+    content: "";
+    
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    
+    background-color: red;
+    
+}
 /*----------------------------------------Слайдер----------------------------------------*/
 .slider {
     position: relative;
@@ -324,7 +334,7 @@ a {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
+    border-bottom: 2px solid #eeeeee;
 }
 
 .services-item {
@@ -384,8 +394,20 @@ a {
     display: flex;
     justify-content: space-between;
     align-content: center;
+    padding-bottom: 42px;
+    position: relative;
 }
-
+.about-us::before {
+    position: absolute;
+    content: "";
+    
+    width: 1160px;
+    height: 2px;
+    left: 20px;
+    bottom: 0;
+    
+    background-color: #eeeeee;
+}
 .about-us-left-column {
     padding-top: 74px;
     width: 660px;
@@ -428,42 +450,51 @@ a {
 }
 .about-us-services-item {
     margin: 0;
+    margin-bottom: 24px;
     padding: 0;
+    position: relative;
+    
 }
-.filter-input-radio + label::before {
+.about-us-services-item::before {
     content: "";
     position: absolute;
     
-    left: -36px;
-    top: -3px;
+    top: 11px;
+    left: -35px;
 
     width: 25px;
-    height: 25px;
-
-    background-image: url("../img/radio-off.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    height: 2px;
+    background-color: #fb565a;
 }
 .about-us-table-title {
     margin: 0;
     margin-top: 29px;
-    margin-bottom: 56px;
+    margin-bottom: 58px;
     padding: 0;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center
 }
-
+.about-us-table td {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 35px;
+    padding-right: 21px;
+}
 .about-us-table-percent-figure {
     font-size: 45px;
     line-height: 10px;
     font-weight: 700;
+    margin: 0;
+    padding: 0;
 }
 
 .about-us-table-percent-simbol {
     font-size: 25px;
     line-height: 10px;
     font-weight: 700;
+    margin: 0;
+    padding: 0;
     vertical-align: top;
 }
 
@@ -475,17 +506,65 @@ a {
 
 .wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 81px;
+    margin-bottom: 36px;
+    padding-top: 50px;
+    padding-bottom: 45px;
+    position: relative;
 }
-
+.wrap::before {
+    position: absolute;
+    content: "";
+    
+    width: 1160px;
+    height: 2px;
+    left: 20px;
+    bottom: 0;
+    
+    background-color: #eeeeee;
+}
 .wrap-item {
     opacity: 0.2;
-    margin-top: 46px;
-    margin-bottom: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    position: relative;
 }
-
+.wrap-item:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    
+    width: 2px;
+    height: 50px;
+    left: -10px;
+    top: 20px;
+    
+    background-color: #eeeeee;
+}
+.wrap-item:nth-child(2)::after {
+    position: absolute;
+    content: "";
+    
+    width: 2px;
+    height: 50px;
+    right: -10px;
+    top: 20px;
+    
+    background-color: #eeeeee;
+}
+.wrap-item:nth-child(3)::after {
+    position: absolute;
+    content: "";
+    
+    width: 2px;
+    height: 50px;
+    right: -10px;
+    top: 20px;
+    
+    background-color: #eeeeee;
+}
 .wrap-item:hover {
     opacity: 1;
 }
@@ -495,7 +574,6 @@ a {
 }
 
 /*----------------------------------------Как нас найти----------------------------------------*/
-
 .map-contacts {
     min-height: 416px;
     position: relative;
@@ -505,23 +583,39 @@ a {
 }
 
 .map-contacts .container {
-    padding-top: 55px;
+    padding-top: 54px;
 }
 
 .we-in-real {
     width: 220px;
+    margin: 0;
     padding: 50px;
+    padding-top: 31px;
     background-color: #fff;
 }
 
 .nerds-name {
+    margin: 0;
+    padding: 0;
+    padding-top: 18px;
+    padding-bottom: 5px;
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.address-telephone {
+.address {
+    margin: 0;
+    padding: 0;
+    padding-top: 18px;
+    line-height: 18px;
+}
+.telephone {
+    margin: 0;
+    margin-bottom: 38px;
+    padding: 0;
+    padding-top: 18px;
     line-height: 18px;
 }
 
@@ -529,21 +623,12 @@ a {
     width: 219px;
 }
 
-.bottom-container {
+.footer-bottom {
+    padding-top: 70px;
+    padding-bottom: 70px;
     display: flex;
-
-    width: 1200px;
-    height: 217px;
-    padding: 0 20px;
-    margin: 0 auto;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
     justify-content: space-around;
     align-items: center;
-
-    /*    outline: 1px solid;*/
 }
 
 .footer-lets-be-friends {
@@ -551,7 +636,38 @@ a {
     line-height: 36px;
     font-weight: 700;
 }
-
+.footer-social {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 0;
+    margin-top: 1px;
+    padding: 0;
+}
+.social-btn {
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+  
+  background-color: #e1e1e1;
+  border-radius: 50%;
+}
+.social-btn:hover {
+    background-color: #e74246;
+}
+.social-btn:active {
+    background-color: #e74246;
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+}
+.social-btn:active svg {
+    opacity: 0.3;
+}
 .footer-discount {
     line-height: 22px;
 }
@@ -560,6 +676,13 @@ a {
 
 .write-us {
     display: none;
+    padding: 70px 100px;
+    transform: translateX(-50%);
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
 }
 
 .write-us-form-title {
@@ -992,6 +1115,9 @@ a {
 .sorting-list a:hover,
 .sorting-list a:focus {
     color: rgba(0, 0, 0, 0.6);
+}
+.sorting-item.active a {
+    color: rgba(0, 0, 0, 1);
 }
 .sorting-arrows {
     width: 41px;
