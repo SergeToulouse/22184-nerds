@@ -689,7 +689,7 @@ a {
     padding: 70px 100px;
     transform: translateX(-50%);
     position: fixed;
-    top: 20%;
+    top: 10%;
     left: 50%;
     background-color: #ffffff;
     box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
@@ -759,7 +759,8 @@ a {
     display: flex;
     flex-direction: column;
     width: 360px;
-    
+    margin: 0;
+    margin-bottom: 35px;
 }
 .field-text {
     line-height: 18px;
@@ -767,7 +768,13 @@ a {
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+    margin: 0;
+}
+.field-title label,
+.field-text label {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 9px;
 }
 .field-title input,
 .field-text textarea {
@@ -777,8 +784,15 @@ a {
 
     border: 2px solid #d7dcde;
     border-radius: 3px;
+    margin: 0;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 15px;
 }
-
+.field-text textarea {
+    min-height: 93px;
+    margin-bottom: 47px;
+}
 .field-title input:hover,
 .field-text textarea:hover {
     line-height: 18px;
@@ -1053,10 +1067,12 @@ a {
 .filter-input-radio:checked + label::before {
     display: none;
 }
-.filter-input-radio + label:hover::before {
+.filter-input-radio + label:hover::before,
+.filter-input-radio:focus + label::before {
     opacity: 1;
 }
-.filter-input-radio + label:hover::after {
+.filter-input-radio + label:hover::after,
+.filter-input-radio:focus + label::after{
     opacity: 1;
 }
 .features-options {
@@ -1082,6 +1098,14 @@ a {
     
     color: #283136;
 }
+
+.filter-option-checkbox label:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.filter-input-checkbox:disabled + label{
+    opacity: 0.1;
+}
 .filter-input-checkbox + label::before {
     content: "";
     position: absolute;
@@ -1095,6 +1119,7 @@ a {
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    opacity: 0.4;
 }
 .filter-input-checkbox:checked + label::after {
     content: "";
@@ -1109,13 +1134,18 @@ a {
     background-image: url("../img/checkbox-on.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    opacity: 0.4;
 }
 .filter-input-checkbox:checked + label::before {
     display: none;
 }
-
-.filter-option-checkbox input:disabled + label {
-    opacity: 0.3;
+.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox:focus + label::before {
+    opacity: 1;
+}
+.filter-input-checkbox + label:hover::after,
+.filter-input-checkbox:focus + label::after{
+    opacity: 1;
 }
 
 .btn-gray {
