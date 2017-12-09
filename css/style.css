@@ -34,6 +34,7 @@ a {
 
     font-size: 16px;
     line-height: 18px;
+    font-weight: 500;
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     text-align: center;
@@ -43,12 +44,20 @@ a {
     border-radius: 3px;
     border: none;
 }
+.btn:focus {
+    outline: 0;
+}
+.btn:active {
+    -webkit-box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+            box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+}
 
 .btn-red {
     background-color: #fb565a;
 }
 
-.btn-red:hover {
+.btn-red:hover,
+.btn-red:focus {
     background-color: #e74246;
 }
 
@@ -98,13 +107,7 @@ a {
 .main-navigation {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: flex;   
 
     font-size: 16px;
     line-height: 30px;
@@ -116,6 +119,7 @@ a {
     margin: 0;
     padding: 0;
     margin-top: 49px;
+    margin-right: 195px;
     margin-bottom: 0;
 }
 
@@ -123,14 +127,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 440px;
-    margin-top: 56px;
+    flex-wrap: wrap;
+    width: 640px;
+    margin-top: 76px;
     margin-bottom: 0;
     padding: 0;
     padding-left: 7px;
@@ -139,7 +138,7 @@ a {
 }
 
 .cart {
-    margin-top: 56px;
+    margin-top: 76px;
     margin-bottom: 0;
 
     list-style: none;
@@ -165,16 +164,19 @@ a {
     background-position: 0 0;
 }
 
-.site-navigation a,
+.site-navigation a {
+    color: #000000;
+    margin-right: 46px;
+}
 .cart-link {
     color: #000000;
 }
-
 .site-navigation a:hover,
 .cart-link:hover,
 .site-navigation a:focus,
 .cart-link:focus {
     color: #fb565a;
+    outline: 0;
 }
 
 .site-navigation a:active,
@@ -224,6 +226,7 @@ a {
     position: relative;
 
     display: inline-block;
+    vertical-align: top;
     width: 18px;
     height: 18px;
     padding: 8px;
@@ -329,7 +332,6 @@ a {
 /*----------------------------------------Наши услуги----------------------------------------*/
 
 .services {
-    /*    outline: 1px solid;*/
     margin: 0;
     padding: 0;
 }
@@ -557,7 +559,6 @@ a {
     background-color: #eeeeee;
 }
 .wrap-item {
-    opacity: 0.2;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -603,11 +604,18 @@ a {
     
     background-color: #eeeeee;
 }
-.wrap-item:hover {
-    opacity: 1;
+.wrap-item img {
+    opacity: 0.2;
 }
-
-.wrap-item:active {
+.wrap-item:hover img,
+.wrap-item:focus img {
+    opacity: 1;
+    outline: 0;
+}
+.wrap-item:focus {
+    outline: 0;
+}
+.wrap-item:active img {
     opacity: 0.1;
 }
 
@@ -669,7 +677,6 @@ a {
 }
 
 .footer-social {
-    width: 260px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -693,6 +700,7 @@ a {
         -ms-flex-align: center;
             align-items: center;
     margin: 0;
+    margin-right: 10px;
     padding: 0;
     width: 80px;
     height: 80px;
@@ -713,7 +721,7 @@ a {
 }
 .discount-container {
     padding-top: 7px;
-    margin-left: 140px;
+    margin-left: 130px;
 }
 .footer-lets-be-friends {
     margin: 0;
@@ -738,6 +746,7 @@ a {
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
     position: fixed;
+    z-index: 200;
     top: 10%;
     left: 50%;
     background-color: #ffffff;
@@ -849,7 +858,8 @@ a {
 .field-text textarea {
     font: inherit;
     line-height: 18px;
-    color: #d7dcde;
+    font-weight: 400;
+    color: rgba(68, 68, 68, 0.5);
 
     border: 2px solid #d7dcde;
     border-radius: 3px;
@@ -865,33 +875,30 @@ a {
 .field-title input:hover,
 .field-text textarea:hover {
     line-height: 18px;
-    color: rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    color: rgba(68, 68, 68, 0.5);
 
     border: 2px solid #b4b9bb;
     border-radius: 3px;
 }
 
 .field-title input:focus,
-.field-title textarea:focus {
+.field-text textarea:focus {
     line-height: 18px;
-    color: #b4b9bb;
+    font-weight: 400;
+    color: rgba(68, 68, 68, 1);
 
-    border: 2px solid #b4b9bb;
+    border: 2px solid #000000;
     border-radius: 3px;
+    outline: 0;
 }
-
+.field-title input:focus::-webkit-input-placeholder,
+.field-text textarea:focus::-webkit-input-placeholder {
+    color: rgba(68, 68, 68, 1);
+}
 .write-us .btn {
     width: 260px;
 }
-
-/*.field-title input:invalid,
-.field-title textarea:invalid {
-    line-height: 18px;
-    color: #e74246;
-    
-    border: 2px solid #e74246;
-    border-radius: 3px;
-}*/
 
 /*----------------------------------------nerds-catalog.html----------------------------------------*/
 
@@ -1044,6 +1051,7 @@ a {
 
 .price-controls label {
     display: inline-block;
+    vertical-align: top;
     width: 50%;
 
     font-size: 16px;
@@ -1157,10 +1165,12 @@ a {
 .filter-input-radio + label:hover::before,
 .filter-input-radio:focus + label::before {
     opacity: 1;
+    outline: 0;
 }
 .filter-input-radio + label:hover::after,
 .filter-input-radio:focus + label::after{
     opacity: 1;
+    outline: 0;
 }
 .features-options {
     padding: 0;
@@ -1232,16 +1242,16 @@ a {
 .filter-input-checkbox + label:hover::before,
 .filter-input-checkbox:focus + label::before {
     opacity: 1;
+    outline: 0;
 }
 .filter-input-checkbox + label:hover::after,
 .filter-input-checkbox:focus + label::after{
     opacity: 1;
+    outline: 0;
 }
 
 .btn-gray {
     color: rgba(0, 0, 0, 1);
-    font-weight: 500;
-
     background-color: #eeeeee;
 }
 
@@ -1253,7 +1263,6 @@ a {
     color: rgba(0, 0, 0, 0.3);
 
     background-color: #d5d5d5;
-    border-top: 3px solid #bfbfbf;
 }
 
 .filters .btn {
@@ -1316,6 +1325,10 @@ a {
 .sorting-list a:hover,
 .sorting-list a:focus {
     color: rgba(0, 0, 0, 0.6);
+    outline: 0;
+}
+.sorting-list a:active {
+    color: rgba(0, 0, 0, 1);
 }
 .sorting-item.active a {
     color: rgba(0, 0, 0, 1);
@@ -1453,11 +1466,8 @@ a {
 
 .catalog-item .btn-red:focus {
     color: #ffffff;
+    outline: 0;
 }
-
-
-
-
 
 .pagination {
     padding: 0;
