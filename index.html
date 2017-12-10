@@ -128,12 +128,13 @@
     <footer class="main-footer">
         <section class="map-contacts">
             <h2 class="visually-hidden">Как нас найти</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59910436516!2d30.320894616394266!3d59.93879418187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1512935426668" allowfullscreen></iframe>
             <div class="container">
                 <div class="we-in-real">
                     <h3 class="nerds-name">nёrds design studio</h3>
                     <p class="address">191186, Санкт-Петербург, ул.&nbsp;Б. Конюшенная, д.19/8</p>
                     <p class="telephone">тел. +7 (812)275-75-75</p>
-                    <a class="btn btn-red" href="writeus.html">Напишите нам</a>
+                    <a class="btn btn-red write-us-open" href="writeus.html">Напишите нам</a>
                 </div>
             </div>
         </section>
@@ -178,6 +179,34 @@
             <button class="btn btn-red" type="submit">Отправить</button>
         </form>
     </section>
+    
+    <script>
+        var link = document.querySelector(".write-us-open");
+        
+        var popup = document.querySelector(".write-us");
+        var close = popup.querySelector(".btn-close");
+        
+        var login = popup.querySelector("[name=Your-name]");
+        
+        link.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            popup.classList.add("write-us-show");
+            login.focus();
+        });
+        
+        close.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            popup.classList.remove("write-us-show");
+        });
+        window.addEventListener("keydown", function (evt) {
+            if (evt.keyCode === 27) {
+                if (popup.classList.contains("write-us-show")) {
+                    popup.classList.remove("write-us-show");
+                }
+            }
+        });
+    </script>
+
 </body>
 
 </html>

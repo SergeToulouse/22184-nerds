@@ -55,12 +55,10 @@ a {
 .btn-red {
     background-color: #fb565a;
 }
-
 .btn-red:hover,
 .btn-red:focus {
     background-color: #e74246;
 }
-
 .btn-red:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #d7373b;
@@ -69,11 +67,10 @@ a {
 .btn-green {
     background-color: #00ca74;
 }
-
-.btn-green:hover {
+.btn-green:hover,
+.btn-green:focus {
     background-color: #00bc6c;
 }
-
 .btn-green:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #00aa62;
@@ -82,16 +79,28 @@ a {
 .btn-yellow {
     background-color: #efc84a;
 }
-
-.btn-yellow:hover {
+.btn-yellow:hover,
+.btn-yellow:focus {
     background-color: #eab534;
 }
-
 .btn-yellow:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #e5a722;
 }
 
+.btn-gray {
+    color: rgba(0, 0, 0, 1);
+    background-color: #eeeeee;
+}
+.btn-gray:hover,
+.btn-gray:focus {
+    background-color: #dfdfdf;
+}
+.btn-gray:active {
+    color: rgba(0, 0, 0, 0.3);
+
+    background-color: #d5d5d5;
+}
 .container {
     width: 1200px;
     padding: 0 20px;
@@ -114,7 +123,6 @@ a {
     font-weight: 500;
     text-transform: uppercase;
 }
-
 .main-header-logo {
     margin: 0;
     padding: 0;
@@ -122,7 +130,14 @@ a {
     margin-right: 195px;
     margin-bottom: 0;
 }
-
+.main-header-logo:hover,
+.main-header-logo:focus {
+    opacity: 0.8;
+    outline: 0;
+}
+.main-header-logo:active {
+    opacity: 0.3;
+}
 .site-navigation {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -626,9 +641,18 @@ a {
     background-size: cover;
     background-image: url(../img/map-contacts.png);
 }
-
+.map-contacts iframe {
+    width: 100%;
+    height: 416px;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .map-contacts .container {
     padding-top: 54px;
+    position: relative;
+    z-index: 100;
 }
 
 .we-in-real {
@@ -708,8 +732,10 @@ a {
   background-color: #e1e1e1;
   border-radius: 50%;
 }
-.social-btn:hover {
+.social-btn:hover,
+.social-btn:focus {
     background-color: #e74246;
+    outline: 0;
 }
 .social-btn:active {
     background-color: #e74246;
@@ -738,6 +764,26 @@ a {
 
 /*----------------------------------------Напишите нам----------------------------------------*/
 
+@keyframes smoke {
+  0% {
+    transform: opacity: 0.01;
+  }
+  20% {
+    transform: opacity: 0.2;
+  }
+  40% {
+    transform: opacity: 0.4;
+  }
+  60% {
+    transform: opacity: 0.6;
+  }
+  80% {
+    transform: opacity: 0.8;
+  }
+  100% {
+    transform: opacity: 1;
+  }
+}
 .write-us {
     display: none;
     width: 760px;
@@ -752,6 +798,10 @@ a {
     background-color: #ffffff;
     -webkit-box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
             box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
+}
+.write-us-show {
+    display: block;
+    animation: smoke 3.6s;
 }
 .btn-close {
   position: absolute;
@@ -1072,7 +1122,9 @@ a {
     border-radius: 5px;
     background: #f1f1f1;
 }
-
+.price-controls input:focus {
+    outline: 0;
+}
 .max-price {
     text-align: right;
 }
@@ -1250,21 +1302,6 @@ a {
     outline: 0;
 }
 
-.btn-gray {
-    color: rgba(0, 0, 0, 1);
-    background-color: #eeeeee;
-}
-
-.btn-gray:hover {
-    background-color: #dfdfdf;
-}
-
-.btn-gray:active {
-    color: rgba(0, 0, 0, 0.3);
-
-    background-color: #d5d5d5;
-}
-
 .filters .btn {
     width: 260px;
     margin: 0;
@@ -1350,10 +1387,14 @@ a {
     margin: 0;
     padding: 0;
 }
+.sorting-arrows a:focus {
+    outline: 0;
+}
 .sorting-arrows path {
     fill: #a6a6a6;
     margin: 0;
     padding: 0;
+    opacity: 0.2;
 }
 .sorting-arrow.active path {
     fill: #010101;
@@ -1366,8 +1407,10 @@ a {
 .sorting-arrow:active path {
     fill: #010101;
 }
-.sorting-arrow:hover path {
-    opacity: 0.2;
+.sorting-arrow:hover path,
+.sorting-arrow:focus path {
+    fill: #a6a6a6;
+    opacity: 1;
 }
 .sorting-arrow:active path {
     fill: #010101;
@@ -1513,9 +1556,11 @@ a {
     padding: 12px 20px;
     border-radius: 3px;
 }
-.pagination-list a:hover {
+.pagination-list a:hover,
+.pagination-list a:focus {
     background-color: #dfdfdf;
     border-color: #dfdfdf;
+    outline: 0;
 }
 
 .pagination-list a:active {
