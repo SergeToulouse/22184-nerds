@@ -6,7 +6,7 @@
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -179,34 +179,7 @@
             <button class="btn btn-red" type="submit">Отправить</button>
         </form>
     </section>
-    
-    <script>
-        var link = document.querySelector(".write-us-open");
-        
-        var popup = document.querySelector(".write-us");
-        var close = popup.querySelector(".btn-close");
-        
-        var login = popup.querySelector("[name=Your-name]");
-        
-        link.addEventListener("click", function (evt) {
-            evt.preventDefault();
-            popup.classList.add("write-us-show");
-            login.focus();
-        });
-        
-        close.addEventListener("click", function (evt) {
-            evt.preventDefault();
-            popup.classList.remove("write-us-show");
-        });
-        window.addEventListener("keydown", function (evt) {
-            if (evt.keyCode === 27) {
-                if (popup.classList.contains("write-us-show")) {
-                    popup.classList.remove("write-us-show");
-                }
-            }
-        });
-    </script>
-
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>
