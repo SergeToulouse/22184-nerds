@@ -638,6 +638,7 @@ a {
 .map-contacts {
     min-height: 416px;
     position: relative;
+    background-color: #f1efe8;
     background-size: cover;
     background-image: url(../img/map-contacts.png);
 }
@@ -650,12 +651,12 @@ a {
     left: 0;
 }
 .map-contacts .container {
-    padding-top: 54px;
     position: relative;
-    z-index: 100;
 }
 
 .we-in-real {
+    position: absolute;
+    top: 54px;
     width: 220px;
     margin: 0;
     padding: 50px;
